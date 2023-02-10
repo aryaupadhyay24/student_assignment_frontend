@@ -50,7 +50,8 @@ const NoteState = (props) => {
 
 
     const addStudent = async (newly) => {
-        setRoll(roll+1);
+        let roll_no=student.length+1;
+        // console.log(roll_no);
         console.log("running ")
         const{firstName,middleName,lastName,selectClass,selectDivision,addressLine1,addressLine2,landmark,city,pincode}=newly
         console.log(firstName,middleName,lastName,selectClass,selectDivision,roll,addressLine1,addressLine2,landmark,city,pincode)
@@ -69,11 +70,11 @@ const NoteState = (props) => {
 
 
                 },
-                body: JSON.stringify({firstName,middleName,lastName,selectClass,selectDivision,rollNo:roll,addressLine1,addressLine2,landmark,city,pincode})
+                body: JSON.stringify({firstName,middleName,lastName,selectClass,selectDivision,rollNo:roll_no,addressLine1,addressLine2,landmark,city,pincode})
 
             });
             console.log("addd note is running");
-            const newStudent = { firstName,middleName,lastName,selectClass,selectDivision,rollNo:roll,addressLine1,addressLine2,landmark,city,pincode};
+            const newStudent = { firstName,middleName,lastName,selectClass,selectDivision,rollNo:roll_no,addressLine1,addressLine2,landmark,city,pincode};
             setStudent(student.concat(newStudent));
             console.log(student);
         }
