@@ -1,0 +1,11 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(250, 244, 234);
+}
+.contain{
+  display: grid;
+  grid-template-columns: 0.7fr 3fr;
+}
+
