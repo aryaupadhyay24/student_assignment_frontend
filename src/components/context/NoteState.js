@@ -5,7 +5,7 @@ import NoteContext from "./NoteContext";
 
 
 const NoteState = (props) => {
-    const host = 'http://localhost';
+    const host = 'https://student-detail-api.onrender.com/';
    
     const [student, setStudent] = useState("");
     const [roll,setRoll]= useState(1);
